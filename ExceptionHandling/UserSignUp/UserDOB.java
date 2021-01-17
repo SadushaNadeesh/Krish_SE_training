@@ -1,4 +1,6 @@
-package Com.UserSignUp;
+package UserSignUp;
+
+import Exceptions.ValidDOBException;
 
 /**
  *
@@ -8,12 +10,15 @@ public class UserDOB {
 
     public void validateDOB(String dob) throws Exception {
         try {
-            System.out.println("DOB added Successfully");
-            UserAddress userAddress = new UserAddress();
-            userAddress.validateAddress(dob);
-        } catch (Exception e) {
-            //e.printStackTrace();
-            throw new Exception("Not a valid DOB",e);
+            if (!dob.isEmpty()) {
+                System.out.println("DOB added Successfully");
+                UserAddress userAddress = new UserAddress();
+                userAddress.validateAddress("Galle");
+            } else {
+                throw new ValidDOBException("Not a Valid DOB");
+            }
+        } catch (ValidDOBException e) {
+            System.out.println("Exception caused by : " + e);
         }
     }
 }

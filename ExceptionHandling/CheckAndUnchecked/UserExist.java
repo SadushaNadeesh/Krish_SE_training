@@ -1,31 +1,30 @@
-package Com.CheckAndUnchecked;
+package CheckAndUnchecked;
 
-import Com.Exceptions.UserAlreadyExistException;
-import Com.Exceptions.UserBlocked;
+import Exceptions.UserAlreadyExistException;
+import Exceptions.UserBlocked;
 
 /**
  *
  * @author Sadusha
  */
 public class UserExist {
-    public void userExist(boolean available){
+
+    public void userExist(boolean available) {
         try {
-            throw new UserAlreadyExistException("User already exists : "+available +" : checked exception");
+            throw new UserAlreadyExistException("User already exists : " + available + " : checked exception");
         } catch (UserAlreadyExistException e) {
-            e.printStackTrace();
+            System.out.println("Exception Caused by : " + e);
         }
     }
-    public void userIsaBot(boolean bot){
-        throw new UserBlocked("User is a bot : "+bot+" : Run time exception");
-//        try {
-//            System.out.println("User is a Bot.");
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//            throw new UserBlocked("User valid : "+bot+" Run time exception");
-//        }
+
+    public void userIsaBot(boolean bot) {
+        if (!bot) {
+            System.out.println("User is not a bot");
+        } else {
+            throw new UserBlocked("User is a bot : " + bot + " : Run time exception");
+        }
     }
-    
-    
+
     public static void main(String[] args) {
         UserExist exist = new UserExist();
         exist.userExist(true);

@@ -1,6 +1,6 @@
-package Com.UserSignUp;
+package UserSignUp;
 
-import Com.Exceptions.UserAlreadyExistException;
+import Exceptions.ValidAddressException;
 
 /**
  *
@@ -9,13 +9,14 @@ import Com.Exceptions.UserAlreadyExistException;
 public class UserAddress {
 
     public void validateAddress(String address) throws Exception {
-        if (address != null) {
-        }
         try {
-            throw new UserAlreadyExistException("User Already Exists");
-        } catch (Exception e) {
-            //e.printStackTrace();
-            throw new Exception("Exception Caused By : ",e);
+            if (address.length() > 5) {
+                System.out.println("User added successfully");
+            } else {
+                throw new ValidAddressException("Not a valid address");
+            }
+        } catch (ValidAddressException e) {
+            System.out.println("Exception caused by : " + e.getMessage());
         }
     }
 }

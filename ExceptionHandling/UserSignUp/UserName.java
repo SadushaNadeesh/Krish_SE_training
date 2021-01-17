@@ -1,4 +1,6 @@
-package Com.UserSignUp;
+package UserSignUp;
+
+import Exceptions.ValidNameException;
 
 /**
  *
@@ -12,10 +14,12 @@ public class UserName {
                 System.out.println("Name added Successfully");
                 UserPassword userPassword = new UserPassword();
                 userPassword.validateUserPassword(name);
+            } else {
+                throw new ValidNameException("Not a valid Name");
             }
-        } catch (Exception e) {
-            //e.printStackTrace();
-            throw new Exception("not a valid username",e);
+        } catch (ValidNameException e) {
+            System.out.println("Exception caused by : " + e.getMessage());
         }
+
     }
 }

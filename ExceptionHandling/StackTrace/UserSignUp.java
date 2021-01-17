@@ -1,6 +1,6 @@
-package Com.StackTrace;
+package StackTrace;
 
-import Com.UserSignUp.UserName;
+import UserSignUp.UserName;
 
 /**
  *
@@ -12,7 +12,7 @@ public class UserSignUp {
             UserName userName = new UserName();
             userName.validateUserName("Sadusha123");
         } catch (Exception e) {
-            e.printStackTrace();
+            System.out.println("Exception caused by : "+e);
         }
     }
 }

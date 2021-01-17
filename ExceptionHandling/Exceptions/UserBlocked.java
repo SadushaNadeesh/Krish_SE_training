@@ -1,4 +1,4 @@
-package Com.Exceptions;
+package Exceptions;
 
 /**
  *
