@@ -17,6 +17,7 @@ public class UserAddress {
             }
         } catch (ValidAddressException e) {
             System.out.println("Exception caused by : " + e.getMessage());
+            //e.printStackTrace();
         }
     }
 }
