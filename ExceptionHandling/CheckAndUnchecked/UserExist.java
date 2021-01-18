@@ -1,7 +1,7 @@
-package CheckAndUnchecked;
+package checkAndUnchecked;
 
-import Exceptions.UserAlreadyExistException;
-import Exceptions.UserBlocked;
+import exceptions.UserAlreadyExistException;
+import exceptions.UserBlocked;
 
 /**
  *

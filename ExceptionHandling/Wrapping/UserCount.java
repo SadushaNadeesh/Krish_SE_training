@@ -1,7 +1,7 @@
-package Wrapping;
+package wrapping;
 
-import Exceptions.UserAlreadyExistException;
-import Exceptions.UserBlocked;
+import exceptions.UserAlreadyExistException;
+import exceptions.UserBlocked;
 
 /**
  *
