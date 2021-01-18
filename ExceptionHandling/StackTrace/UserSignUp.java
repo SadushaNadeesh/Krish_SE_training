@@ -1,6 +1,6 @@
-package StackTrace;
+package stackTrace;
 
-import UserSignUp.UserName;
+import userSignUp.UserName;
 
 /**
  *
@@ -8,17 +8,19 @@ import UserSignUp.UserName;
  */
 public class UserSignUp {
 
-    public static void signUp(){
+    public void signUp(){
         try {
             UserName userName = new UserName();
             userName.validateUserName("Sadusha123");
         } catch (Exception e) {
             System.out.println("Exception caused by : "+e);
             //System.err.println(e);
+            //e.printStackTrace();
         }
 
     }
     public static void main(String[] args) {
-        signUp();
+        UserSignUp userSignUp = new UserSignUp();
+        userSignUp.signUp();
     }
 }

@@ -1,6 +1,6 @@
-package UserSignUp;
+package userSignUp;
 
-import Exceptions.ValidPasswordException;
+import exceptions.ValidPasswordException;
 
 /**
  *
@@ -19,6 +19,7 @@ public class UserPassword {
             }
         } catch (ValidPasswordException e) {
             System.out.println("Exception caused by : " + e.getMessage());
+            //e.printStackTrace();
         }
     }
 }

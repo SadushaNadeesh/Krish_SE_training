@@ -1,6 +1,6 @@
-package UserSignUp;
+package userSignUp;
 
-import Exceptions.ValidNameException;
+import exceptions.ValidNameException;
 
 /**
  *
@@ -19,6 +19,7 @@ public class UserName {
             }
         } catch (ValidNameException e) {
             System.out.println("Exception caused by : " + e.getMessage());
+            //e.printStackTrace();
         }
 
     }

@@ -1,6 +1,6 @@
-package UserSignUp;
+package userSignUp;
 
-import Exceptions.ValidDOBException;
+import exceptions.ValidDOBException;
 
 /**
  *
@@ -19,6 +19,7 @@ public class UserDOB {
             }
         } catch (ValidDOBException e) {
             System.out.println("Exception caused by : " + e);
+            //e.printStackTrace();
         }
     }
 }

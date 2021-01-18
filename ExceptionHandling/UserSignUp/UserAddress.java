@@ -1,6 +1,6 @@
-package UserSignUp;
+package userSignUp;
 
-import Exceptions.ValidAddressException;
+import exceptions.ValidAddressException;
 
 /**
  *
