@@ -1,0 +1,1 @@
+These spring boot projects will not work after spring version 2.3.8.RELEASE
